@@ -7,11 +7,11 @@ import { PagesComponent } from './pages.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'dashboard',
     component: PagesComponent,
     children: [
       {
-        path: 'dashboard',
+        path: '',
         component: DashboardComponent,
       },
       {
@@ -21,11 +21,6 @@ const routes: Routes = [
       {
         path: 'chart1',
         component: Chart1Component,
-      },
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full',
       },
     ],
   },
