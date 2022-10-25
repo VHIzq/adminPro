@@ -10,7 +10,7 @@
           <div 
             class="progress-bar bg-info progress-bar-striped active"  
             style=" height:10px;" 
-            [style.width="progreso +  '%' "]
+            [style.width]="getPorcentage"
             role="progressbar">
           </div>
         </div>
@@ -23,13 +23,17 @@
           <div class="card-body">
             <div class="input-group">
               <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">
+                <button (click)="changeValue(-1)" ng class="btn btn-primary" type="button">
                   <i class="fa fa-minus"></i>
                 </button>
               </span>
-              <input type="text" class="form-control" placeholder="Product name">
+              <input 
+                [(ngModel)]="progress" 
+                type="text" 
+                class="form-control" 
+                placeholder="Progress">
                 <span class="input-group-btn">
-                  <button class="btn btn-primary" type="button">
+                  <button (click)="changeValue(10)" class="btn btn-primary" type="button">
                     <i class="fa fa-plus"></i>
                   </button>
 
