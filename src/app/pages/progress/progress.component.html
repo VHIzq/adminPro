@@ -8,10 +8,19 @@
         </h4>
         <div class="progress m-t-20">
           <div 
+            class="progress-bar bg-primary progress-bar-striped active"  
+            style=" height:10px;" 
+            role="progressbar">
+          </div>
+          <!-- [style.width]="getPorcentage" -->
+        </div>
+
+        <div class="progress m-t-20">
+          <div 
             class="progress-bar bg-info progress-bar-striped active"  
             style=" height:10px;" 
-            [style.width]="getPorcentage"
             role="progressbar">
+            <!-- [style.width]="getPorcentage" -->
           </div>
         </div>
       </div>
@@ -21,33 +30,15 @@
       <div class="col-6">
         <div class="card">
           <div class="card-body">
-            <div class="input-group">
-              <span class="input-group-btn">
-                <button (click)="changeValue(-1)" ng class="btn btn-primary" type="button">
-                  <i class="fa fa-minus"></i>
-                </button>
-              </span>
-              <input 
-                [(ngModel)]="progress" 
-                type="text" 
-                class="form-control" 
-                placeholder="Progress">
-                <span class="input-group-btn">
-                  <button (click)="changeValue(10)" class="btn btn-primary" type="button">
-                    <i class="fa fa-plus"></i>
-                  </button>
-
-                </span>
-              </div>
-
-            </div>
+            <app-incrementer [valor]="15"></app-incrementer>
+          </div>
           </div>
         </div>
 
         <div class="col-6">
           <div class="card">
             <div class="card-body">
-              2 
+              <app-incrementer></app-incrementer>
             </div>
           </div>
         </div>
