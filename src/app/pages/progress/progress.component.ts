@@ -15,6 +15,6 @@ export class ProgressComponent  {
   }
   
   get getProgress2() {
-    return `${this.progress1}%`
+    return `${this.progress2}%`
   }
 }
