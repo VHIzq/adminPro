@@ -9,7 +9,7 @@ import { ChartData, ChartType } from 'chart.js';
 export class DonoughtComponent {
   public doughnut: ChartType = 'doughnut';
 
-  public doughnutChartLabels: string[] = ['Download Sales'];
+  public doughnutChartLabels: string[] = ['Download Sales', 'New Year Sales', 'Xmas Sales'];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [{ data: [350, 450, 100] }],

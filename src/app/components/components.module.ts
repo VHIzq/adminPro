@@ -9,6 +9,6 @@ import { NgChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [IncrementerComponent, DonoughtComponent],
   imports: [CommonModule, FormsModule, NgChartsModule],
-  exports: [IncrementerComponent],
+  exports: [IncrementerComponent, DonoughtComponent],
 })
 export class ComponentsModule {}
