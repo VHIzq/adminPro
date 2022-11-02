@@ -31,4 +31,18 @@ export class IncrementerComponent implements OnInit {
     this.valueOutput.emit(this.progress);
     return this.progress = this.progress + value;
   }
+
+  onChange(newValor: number) {
+    const isValueMoreThanLimit = newValor >= 100;
+    const isValueBelowThanLimit = newValor <= 0;
+    
+    if (isValueMoreThanLimit) {
+      this.progress = 100;
+    } else if ( isValueBelowThanLimit ) {
+      this.progress = 0; 
+    } else {
+      this.progress = newValor;
+    }
+      this.valueOutput.emit(this.progress);
+  }
 }

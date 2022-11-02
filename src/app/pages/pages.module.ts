@@ -6,6 +6,8 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { ComponentsModule } from '../components/components.module';
 
+import { NgChartsModule } from 'ng2-charts';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Chart1Component } from './chart1/chart1.component';
@@ -25,7 +27,8 @@ import { PagesComponent } from './pages.component';
     SharedModule,
     FormsModule,
     RouterModule,
-    ComponentsModule
+    ComponentsModule,
+    NgChartsModule
   ],
   exports: [
     DashboardComponent,

@@ -1,16 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-chart1',
   templateUrl: './chart1.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class Chart1Component implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class Chart1Component {
+  
 }
