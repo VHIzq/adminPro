@@ -1,7 +1,11 @@
 <div class="card">
   <div class="card-body">
     <div>
-      <h3>Sales</h3>
+      <h3 
+        *ngIf="title" else #notitle
+      >
+        {{title}} 
+      </h3>
       <div style="display: block">
       <canvas 
         baseChart
@@ -13,3 +17,9 @@
     </div>
   </div>
 </div>
+
+<ng-template #notile>
+  <h2>This element doesn't contain a title to show</h2>
+</ng-template>
+
+

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChartData, ChartType } from 'chart.js';
 
 @Component({
@@ -7,11 +7,17 @@ import { ChartData, ChartType } from 'chart.js';
   styleUrls: ['./donought.component.css'],
 })
 export class DonoughtComponent {
+  
+  @Input() title!: string;
+
   public doughnut: ChartType = 'doughnut';
 
-  public doughnutChartLabels: string[] = ['Download Sales', 'New Year Sales', 'Xmas Sales'];
-  public doughnutChartData: ChartData<'doughnut'> = {
+  @Input("labels") public doughnutChartLabels: string[] = ['Abarrotes', 'Cremeria', 'Electronicos'];
+  
+  @Input("data")  public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
-    datasets: [{ data: [350, 450, 100] }],
+    datasets: [{ data: [750, 550, 200] }],
   };
+
+
 }

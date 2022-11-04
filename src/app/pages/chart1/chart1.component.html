@@ -1,22 +1,28 @@
 <div class="row">
   
   <div class="col-3">
-    <app-donought title="Sales" ></app-donought>
-  </div>
-  
-  <div class="col-3">
     <app-donought 
-    [labels]="labels1" 
-    [data]="data1"
-     
+      title="Sales" 
     ></app-donought>
   </div>
   
   <div class="col-3">
-    <app-donought></app-donought>
+    <app-donought 
+      [labels]="labels1" 
+      [data]="data1"
+      title="Xmas Sales"
+    ></app-donought>
   </div>
   
   <div class="col-3">
-    <app-donought></app-donought>
+    <app-donought 
+      title="New Products"
+    ></app-donought>
+  </div>
+  
+  <div class="col-3">
+    <app-donought
+      title="Oldies but nice"
+    ></app-donought>
   </div>
 </div>
